@@ -4,5 +4,13 @@
     "config:base"
   ],
   "baseBranches": ["develop"],
-  "schedule": ["every weekend"]
+  "schedule": ["every weekend"],
+  "packageRules": [
+    {
+      "groupName": "io.insert-koin",
+      "matchPackagePatterns": [
+        "^io\\.insert-koin"
+      ]
+    }
+  ]
 }
