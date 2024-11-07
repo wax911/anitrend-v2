@@ -31,7 +31,7 @@ class AppInfo(context: Context) : IAppInfo {
         val packageManager = context.packageManager
         val packageName = context.packageName
         val packageInfo = packageManager.getPackageInfo(packageName, 0)
-        return packageInfo.versionName
+        return packageInfo.versionName ?: "none"
     }
 
     private fun installationSource(context: Context): String {
