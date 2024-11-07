@@ -5,6 +5,9 @@
   ],
   "baseBranches": ["develop"],
   "schedule": ["every weekend"],
+  "automerge": true,
+  "automergeType": "pr",
+  "automergeStrategy": "rebase",
   "packageRules": [
     {
       "groupName": "io.insert-koin",
