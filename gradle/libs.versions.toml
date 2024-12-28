@@ -46,7 +46,6 @@ coil = "2.7.0"
 
 devrieze-xmlutil = "0.90.3"
 
-google-accompanist = "0.36.0"
 google-android-material = "1.12.0"
 
 jetbrains-dokka = "2.0.0"
@@ -233,13 +232,13 @@ coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 devrieze-xmlutil-android-core = { module = "io.github.pdvrieze.xmlutil:core-android", version.ref = "devrieze-xmlutil" }
 devrieze-xmlutil-android-serialization = { module = "io.github.pdvrieze.xmlutil:serialization-android", version.ref = "devrieze-xmlutil" }
 
-google-accompanist-insets = { module = "com.google.accompanist:accompanist-insets-ui", version.ref = "google-accompanist" }
-google-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "google-accompanist" }
-google-accompanist-appcompat-theme = { module = "com.google.accompanist:accompanist-appcompat-theme", version.ref = "google-accompanist" }
-google-accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "google-accompanist" }
-google-accompanist-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "google-accompanist" }
-google-accompanist-flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "google-accompanist" }
-google-accompanist-drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "google-accompanist" }
+google-accompanist-insets = { module = "com.google.accompanist:accompanist-insets-ui", version = "0.36.0" }
+google-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version = "0.36.0" }
+google-accompanist-appcompat-theme = { module = "com.google.accompanist:accompanist-appcompat-theme", version = "0.36.0" }
+google-accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version = "0.36.0" }
+google-accompanist-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version = "0.36.0" }
+google-accompanist-flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version = "0.36.0" }
+google-accompanist-drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version = "0.37.0" }
 
 google-gson = { module = "com.google.code.gson:gson", version = "2.11.0" }
 
