@@ -25,7 +25,7 @@ import co.anitrend.suggestion.component.viewmodel.SuggestionViewModel
 import co.anitrend.suggestion.component.viewmodel.state.SuggestionState
 import co.anitrend.suggestion.provider.FeatureProvider
 import org.koin.androidx.fragment.dsl.fragment
-import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 private val fragmentModule = module {

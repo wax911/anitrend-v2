@@ -33,7 +33,7 @@ import co.anitrend.media.discover.filter.provider.FeatureProvider
 import co.anitrend.navigation.MediaDiscoverFilterRouter
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.fragment.dsl.fragment
-import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 private val fragmentModule = module {
@@ -68,7 +68,7 @@ private val fragmentModule = module {
 }
 
 private val viewModelModule = module {
-	viewModel { 
+	viewModel {
 		GenreViewModel(
 			state = GenreViewModelState(
 				interactor = get()

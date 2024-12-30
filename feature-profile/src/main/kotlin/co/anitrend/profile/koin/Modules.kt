@@ -24,7 +24,7 @@ import co.anitrend.profile.component.viewmodel.ProfileViewModel
 import co.anitrend.profile.component.viewmodel.state.ProfileState
 import co.anitrend.profile.provider.FeatureProvider
 import org.koin.androidx.fragment.dsl.fragment
-import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 private val coreModule = module {

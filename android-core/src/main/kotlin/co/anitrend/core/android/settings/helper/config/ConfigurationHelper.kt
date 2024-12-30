@@ -18,6 +18,7 @@
 package co.anitrend.core.android.settings.helper.config
 
 import android.content.Context
+import androidx.activity.enableEdgeToEdge
 import androidx.annotation.StyleRes
 import androidx.fragment.app.FragmentActivity
 import co.anitrend.core.android.settings.common.IConfigurationSettings

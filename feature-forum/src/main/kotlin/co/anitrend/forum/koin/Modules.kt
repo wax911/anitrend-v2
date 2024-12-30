@@ -25,7 +25,7 @@ import co.anitrend.forum.component.viewmodel.state.ForumState
 import co.anitrend.forum.provider.FeatureProvider
 import co.anitrend.navigation.ForumRouter
 import org.koin.androidx.fragment.dsl.fragment
-import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 private val fragmentModule = module {

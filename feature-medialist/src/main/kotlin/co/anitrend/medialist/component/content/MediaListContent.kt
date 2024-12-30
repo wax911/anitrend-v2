@@ -28,13 +28,12 @@ import co.anitrend.arch.ui.view.widget.model.StateLayoutConfig
 import co.anitrend.core.android.assureParamNotMissing
 import co.anitrend.core.android.settings.extensions.flowUpdating
 import co.anitrend.core.component.content.list.AniTrendListContent
-import co.anitrend.core.extensions.orEmpty
 import co.anitrend.data.settings.customize.ICustomizationSettings
 import co.anitrend.data.settings.customize.common.PreferredViewMode
 import co.anitrend.domain.media.entity.Media
 import co.anitrend.medialist.component.content.viewmodel.MediaListViewModel
 import kotlinx.coroutines.launch
-import org.koin.androidx.viewmodel.ext.android.stateViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MediaListContent(
     private val settings: ICustomizationSettings,
@@ -42,9 +41,7 @@ class MediaListContent(
     override val supportViewAdapter: SupportAdapter<Media>
 ) : AniTrendListContent<Media>() {
 
-    private val viewModel by stateViewModel<MediaListViewModel>(
-        state = { arguments.orEmpty() }
-    )
+    private val viewModel by viewModel<MediaListViewModel>()
 
     override val defaultSpanSize: Int
         get() = getSpanSizeByPreference(
@@ -105,8 +102,7 @@ class MediaListContent(
             onPostModelChange(it)
         }
         viewModel.filter.observe(viewLifecycleOwner) {
-            if (it != null)
-                viewModelState().invoke(it)
+            it?.let(viewModelState()::invoke)
         }
     }
 

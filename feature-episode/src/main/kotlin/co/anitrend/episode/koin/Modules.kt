@@ -30,7 +30,7 @@ import co.anitrend.episode.provider.FeatureProvider
 import co.anitrend.navigation.EpisodeRouter
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.fragment.dsl.fragment
-import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.module.dsl.viewModel
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 

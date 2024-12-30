@@ -28,17 +28,15 @@ abstract class AniTrendLifecycleService : LifecycleService(), AndroidScopeCompon
     override val scope by newScope()
 
     override fun onCreate() {
+        runCatching { Timber.v("Created service scope: $scope") }
         super.onCreate()
-        runCatching {
-            Timber.v("Opening service scope: $scope")
-        }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        runCatching {
-            Timber.v("Closing service scope: $scope")
-            closeScope()
-        }
+    /**
+     * Called before closing a scope, on onDestroy
+     */
+    override fun onCloseScope() {
+        Timber.v("Closing service scope: $scope")
+        super.onCloseScope()
     }
 }

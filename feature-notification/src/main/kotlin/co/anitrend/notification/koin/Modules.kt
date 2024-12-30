@@ -25,7 +25,7 @@ import co.anitrend.notification.component.viewmodel.NotificationViewModel
 import co.anitrend.notification.component.viewmodel.state.NotificationState
 import co.anitrend.notification.provider.FeatureProvider
 import org.koin.androidx.fragment.dsl.fragment
-import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 private val fragmentModule = module {
