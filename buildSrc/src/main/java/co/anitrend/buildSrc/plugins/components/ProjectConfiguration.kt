@@ -93,7 +93,7 @@ private fun Project.configureLint() = baseAppExtension().run {
 internal fun Project.configureAndroid(): Unit = baseExtension().run {
     compileSdkVersion(35)
     defaultConfig {
-        minSdk = 23
+        minSdk = 24
         targetSdk = 35
         versionCode = props[PropertyTypes.CODE].toInt()
         versionName = props[PropertyTypes.VERSION]

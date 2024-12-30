@@ -51,7 +51,6 @@ abstract class AniTrendScreen : SupportActivity(), AndroidScopeComponent, KoinSc
 
     override val scope by activityRetainedScope()
 
-
     private val connectivity by inject<ISupportConnectivity>()
 
     /**

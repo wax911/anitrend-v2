@@ -20,6 +20,7 @@ package co.anitrend.core.android.koin
 import android.content.pm.ShortcutManager
 import android.net.ConnectivityManager
 import android.os.PowerManager
+import androidx.core.app.NotificationManagerCompat
 import co.anitrend.arch.extension.dispatchers.SupportDispatcher
 import co.anitrend.arch.extension.dispatchers.contract.ISupportDispatcher
 import co.anitrend.arch.extension.ext.systemServiceOf
@@ -27,6 +28,7 @@ import co.anitrend.arch.extension.util.date.contract.AbstractSupportDateHelper
 import co.anitrend.core.android.controller.power.AndroidPowerController
 import co.anitrend.core.android.controller.power.contract.IPowerController
 import co.anitrend.core.android.helpers.date.AniTrendDateHelper
+import co.anitrend.core.android.helpers.notification.NotificationHelper
 import co.anitrend.core.android.settings.Settings
 import co.anitrend.core.android.settings.helper.config.ConfigurationHelper
 import co.anitrend.core.android.settings.helper.config.contract.IConfigurationHelper
@@ -67,6 +69,13 @@ private val coreModule = module {
         /** TODO: On language preference change, destroy and recreate [PrettyTime] */
         val localeHelper = get<ILocaleHelper>()
         PrettyTime(localeHelper.locale)
+    }
+
+    factory {
+        NotificationHelper(
+            notificationManager = NotificationManagerCompat
+                .from(androidContext())
+        )
     }
 }
 
