@@ -197,6 +197,7 @@ internal fun Project.configureAndroid(): Unit = baseExtension().run {
         if (isAppModule() || isCoreModule()) {
             compilerArgumentOptions.apply {
                 add("-opt-in=org.koin.core.component.KoinApiExtension")
+                add("-opt-in=org.koin.viewmodel.KoinInternalApi")
                 add("-opt-in=org.koin.core.KoinExperimentalAPI")
             }
         }

@@ -25,7 +25,7 @@ import co.anitrend.feed.component.viewmodel.state.FeedState
 import co.anitrend.feed.provider.FeatureProvider
 import co.anitrend.navigation.FeedRouter
 import org.koin.androidx.fragment.dsl.fragment
-import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 private val fragmentModule = module {

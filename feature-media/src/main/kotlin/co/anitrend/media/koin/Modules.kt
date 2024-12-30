@@ -22,7 +22,7 @@ import co.anitrend.media.component.viewmodel.MediaViewModel
 import co.anitrend.media.component.viewmodel.state.MediaState
 import co.anitrend.media.provider.FeatureProvider
 import co.anitrend.navigation.MediaRouter
-import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 private val viewModelModule = module {

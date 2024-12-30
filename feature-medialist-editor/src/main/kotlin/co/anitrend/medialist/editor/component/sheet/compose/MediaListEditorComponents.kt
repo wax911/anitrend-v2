@@ -33,7 +33,6 @@ import co.anitrend.domain.media.entity.Media
 import co.anitrend.medialist.editor.component.sheet.viewmodel.state.MediaListEditorState
 import coil.ImageLoader
 import coil.compose.rememberAsyncImagePainter
-import org.koin.androidx.compose.get
 import org.koin.compose.koinInject
 
 
