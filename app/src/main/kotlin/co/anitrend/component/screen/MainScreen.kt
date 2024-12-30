@@ -35,6 +35,9 @@ import co.anitrend.component.action.ChangeSettingsMenuStateAction
 import co.anitrend.component.action.ShowHideFabStateAction
 import co.anitrend.component.presenter.MainPresenter
 import co.anitrend.component.viewmodel.MainScreenViewModel
+import co.anitrend.core.android.helpers.notification.config.NotificationConfig
+import co.anitrend.core.android.helpers.notification.hasNotificationPermissionFor
+import co.anitrend.core.android.helpers.notification.requestPostNotificationPermission
 import co.anitrend.core.component.screen.AniTrendBoundScreen
 import co.anitrend.core.extensions.invoke
 import co.anitrend.core.koin.scope.AppScope
@@ -189,6 +192,14 @@ class MainScreen : AniTrendBoundScreen<MainScreenBinding>() {
                 navigationDrawer.setCheckedItem(viewModel.state.selectedItem)
                 setUpNavigationDrawer()
                 observeNavigationDrawer()
+            }
+        }
+        lifecycleScope.launch {
+            val needsNotificationPermission = NotificationConfig.entries.any {
+                !hasNotificationPermissionFor(it)
+            }
+            if (needsNotificationPermission) {
+                requestPostNotificationPermission()
             }
         }
         onUpdateUserInterface()
